@@ -1,5 +1,15 @@
 import shapefile, rasterio
 import numpy as np
+import os
+def of(filename):
+    fulldir = f"../output/"
+    os.makedirs(fulldir, exist_ok=True)
+    return os.path.abspath(os.path.join(fulldir, filename))
+
+def ff(filename):
+    fulldir = f"../figures/"
+    os.makedirs(fulldir, exist_ok=True)
+    return os.path.abspath(os.path.join(fulldir, filename))
 
 def loadCoordsOfPoints(shp):
     r = shapefile.Reader(shp)
