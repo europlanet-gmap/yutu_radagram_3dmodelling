@@ -71,7 +71,7 @@ import glob
 
 # %%
 auxes = []
-
+exclude_exts = [".vtp"]
 for f in files:
 #     print(f.filename)
     
@@ -85,6 +85,13 @@ for f in files:
         
         aux.remove(f.filename)
         for au in aux:
+            skip=False
+            for ex in exclude_exts:
+                if au.endswith(ex):
+                    skip = True
+                    
+            if skip:
+                continue
             from copy import deepcopy
             newf = deepcopy(f)
             newf.filename =au
@@ -121,6 +128,9 @@ for f in files:
     print(f"expected output {fullout}\n")
         
     
+
+# %% [markdown]
+# # some info to use in the package readme
 
 # %%
 bounds = "../images/crater_bounds.gpkg"
@@ -164,6 +174,9 @@ cs = ext.crs
 # %%
 cs.to_proj4()
 
+# %% [markdown]
+# # Compress everything
+
 # %%
 import os
 import zipfile
@@ -179,3 +192,5 @@ def zipdir(path, ziph):
 zipf = zipfile.ZipFile(f"{out_folder}.zip", 'w', zipfile.ZIP_DEFLATED)
 zipdir(out_folder, zipf)
 zipf.close()
+
+# %%
