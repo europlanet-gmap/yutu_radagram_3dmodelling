@@ -11,7 +11,7 @@ Xiao, L. et al., 2015, A young multilayered terrane of the northern Mare Imbrium
 
 # Notebooks
 
-The notebooks are mostly self-contained although some methods have been placed within the smalllib.py module for reasy reuse trhoughout the notebooks.
+The notebooks are mostly self-contained although some methods have been placed within the smalllib.py module for easy reuse trhoughout the notebooks.
 
 execute_notebooks.py executes all the notebooks in the correct order
 
