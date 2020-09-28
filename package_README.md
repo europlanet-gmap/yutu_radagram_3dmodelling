@@ -26,6 +26,6 @@
 |	Heritage used	|	N/A	|	
 |	Link to other repositories	|	Data: Code:	|	
 |	Acknowledgements beyond Planmap	|	N/A	|	
-|	Polygon number	|	N/A	|
+|	Polygon number	|	< 30k triangles	|
 |	Number of attached textures	|	2 textures (DEM and radargram)	|	
 |	Modelling method	|	Analytical explicit modelling |

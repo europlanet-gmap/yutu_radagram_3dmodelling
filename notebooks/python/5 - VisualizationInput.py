@@ -17,7 +17,7 @@
 # %%
 # %pylab inline
 import pyvista # going to use pyvista as 3d visualization backend
-from smalllib import sampleRasterAtPoints, of, ff # we will reuse this method
+from smalllib import sampleRasterAtPoints, of, ff, save_as_obj # we will reuse this method
 import rasterio
 
 
@@ -116,6 +116,10 @@ asline = polyline_from_points(path_up) # create a pyvista polydata from a set of
 tube = asline.tube(radius=0.1, scalars=None) # generate a tube for visualization
 bp.add_mesh(tube, color="blue") #  add to 3D view
 asline.save(of("path.vtp"))
+
+tube.points /=1000
+save_as_obj(of("yutu_path.obj"), tube)
+tube.points *=1000
 
 # %% [markdown]
 # # The Horizons, very similar to the path

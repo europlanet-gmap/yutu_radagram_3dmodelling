@@ -34,7 +34,8 @@ class ArchivableFile:
 
 # %%
 files = [ArchivableFile(of("crater_cropped_dem_textured.obj"), True , "model/meshes"),
-        ArchivableFile(of("radargram.obj"), True , "model/meshes")]
+        ArchivableFile(of("radargram.obj"), True , "model/meshes"),
+        ArchivableFile(of("yutu_path.obj"), False, "model/meshes")]
 
 # %%
 for i in [0,1,2]:
